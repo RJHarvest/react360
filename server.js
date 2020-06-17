@@ -3,11 +3,11 @@ const path = require('path')
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, 'build')))
+app.use('/', express.static(path.join(__dirname, 'build')))
 app.use('/static_assets', express.static(path.join(__dirname, 'static_assets')))
 
 app.get('/', (req, res) => {
-  res.send('build/index.html')
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
 })
 
 const port = process.env.PORT || 5000
