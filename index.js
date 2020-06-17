@@ -4,17 +4,15 @@ import {
   StyleSheet,
   Text,
   View,
+  Image
 } from 'react-360';
 
 export default class trial360 extends React.Component {
+
   render() {
     return (
       <View style={styles.panel}>
-        <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Yo 360
-          </Text>
-        </View>
+        <Image style={styles.image} source={{ uri: './static_assets/person2.png' }} />
       </View>
     );
   }
@@ -25,9 +23,17 @@ const styles = StyleSheet.create({
     // Fill the entire surface
     width: 1000,
     height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    //backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  image: {
+    width: 377,
+    height: 512,
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 140,
   },
   greetingBox: {
     padding: 20,
