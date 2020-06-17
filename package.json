@@ -2,6 +2,10 @@
   "name": "trial360",
   "version": "0.0.1",
   "private": true,
+  "engine": {
+    "node": "10.16.3",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "start": "node node_modules/react-360/scripts/packager.js",
     "bundle": "node node_modules/react-360/scripts/bundle.js",
