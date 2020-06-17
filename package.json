@@ -2,23 +2,26 @@
   "name": "trial360",
   "version": "0.0.1",
   "private": true,
+  "main": "server.js",
   "engine": {
     "node": "10.16.3",
     "npm": "6.9.0"
   },
   "scripts": {
-    "start": "node node_modules/react-360/scripts/packager.js",
+    "start": "node server.js",
+    "dev": "node node_modules/react-360/scripts/packager.js",
     "bundle": "node node_modules/react-360/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/index.html')\"",
     "devtools": "react-devtools",
     "test": "jest"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "16.3.2",
-    "react-native": "~0.55.4",
-    "three": "^0.87.0",
     "react-360": "~1.1.0",
-    "react-360-web": "~1.1.0"
+    "react-360-web": "~1.1.0",
+    "react-native": "~0.55.4",
+    "three": "^0.87.0"
   },
   "devDependencies": {
     "babel-jest": "^19.0.0",
